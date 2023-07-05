@@ -1,4 +1,3 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
@@ -37,7 +36,10 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-
+      - name: Copy Python files
+        run: |
+          cp <path-to-your-parking-lot-python-files> ./_site
+          
   # Deployment job
   deploy:
     environment:
