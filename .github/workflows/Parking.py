@@ -34,29 +34,20 @@ class ParkingSpot:
     def __init__(self):
         self.spot_number = None
         self.vehicle = None
-        self.is_available = True
+        self.is_available_spot = True
 
     def park_vehicle(self, vehicle):
         self.vehicle = vehicle
-        self.is_available = False
+        self.is_available_spot = False
 
     def remove_vehicle(self):
         self.vehicle = None
-        self.is_available = True
+        self.is_available_spot = True
 
     def is_available(self):
-        return self.is_available
+        return self.is_available_spot
 
 
-class Vehicle:
-    def __init__(self, license_plate, vehicle_type):
-        self.license_plate = license_plate
-        self.vehicle_type = vehicle_type
-
-    def get_license_plate(self):
-        return self.license_plate
-
-   
 class Vehicle:
     def __init__(self, license_plate, vehicle_type):
         self.license_plate = license_plate
