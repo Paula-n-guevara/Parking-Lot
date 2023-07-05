@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
       - name: Copy Python files
         run: |
-          cp <path-to-your-parking-lot-python-files> ./_site
+          cp <workflows/Parking.py> ./_site
           
   # Deployment job
   deploy:
