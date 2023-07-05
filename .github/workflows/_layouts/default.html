@@ -5,7 +5,32 @@
 <!-- ... -->
 
 <!-- Add the JavaScript code within a <script> tag here -->
-<script>
+
+
+<!-- ... -->
+
+<head>
+  <title>{{ page.title }}</title>
+  <!-- Add any necessary CSS or JavaScript includes here -->
+</head>
+<body>
+  <header>
+    <!-- Add your site's header content here -->
+  </header>
+  
+  <main>
+    <!-- Content for individual pages goes here -->
+    {{ content }}
+  </main>
+
+  <footer>
+    <!-- Add your site's footer content here -->
+  </footer>
+
+  <!-- Add the JavaScript code within a <script> tag here -->
+ 
+</body>
+  <script>
 document.getElementById("user-input-form").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form submission
   var userInput = document.getElementById("user-input").value;
@@ -32,30 +57,4 @@ document.getElementById("user-input-form").addEventListener("submit", function(e
   });
 });
 </script>
-
-<!-- ... -->
-
-<head>
-  <title>{{ page.title }}</title>
-  <!-- Add any necessary CSS or JavaScript includes here -->
-</head>
-<body>
-  <header>
-    <!-- Add your site's header content here -->
-  </header>
-  
-  <main>
-    <!-- Content for individual pages goes here -->
-    {{ content }}
-  </main>
-
-  <footer>
-    <!-- Add your site's footer content here -->
-  </footer>
-
-  <!-- Add the JavaScript code within a <script> tag here -->
-  <script>
-    // JavaScript code for handling user input and interacting with the Python file
-  </script>
-</body>
 </html>
